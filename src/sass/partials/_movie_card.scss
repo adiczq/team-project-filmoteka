@@ -1,0 +1,90 @@
+.movie-card {
+display: block;
+cursor: pointer;
+width: 280px;
+transition: transform 0.3s linear;
+&:hover,
+&:focus {
+    transform: scale(1.03);
+}
+@include tablet {
+    width: 336px;
+}
+@include desktop {
+    width: 395px;
+}
+&__poster-container {
+    width: 280px;
+    height: 398px;
+    @include tablet {
+        width: 336px;
+        height: 455px;
+    }
+    @include desktop {
+        width: 395px;
+        height: 574px;
+    }
+}
+&__poster {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    overflow: hidden;
+    
+}
+&__figcaption {
+    margin: 0;
+    padding-top: 10px;
+    font-family: $defaultFontStyle;
+    font-weight: 500;
+    font-size: $smallFontSize;
+    line-height: $defaultLineHeight;
+    @include tablet {
+        padding-top: 8px;
+    }
+    @include desktop {
+        padding-top: 12px;
+    }
+}
+&__title {
+    color: $titleColor;
+    margin: 0;
+    @include desktop {
+        font-size: $mediumFontSize;
+        line-height: $largeLineHeight; 
+    }
+}
+&__genre {
+    color: $descritiopnColor;  
+    @include desktop {
+        font-size: $mediumFontSize;
+        line-height: $largeLineHeight; 
+    }
+}
+&__release-date {
+    color: $descritiopnColor;
+    @include desktop {
+        font-size: $mediumFontSize;
+        line-height: $largeLineHeight; 
+    }  
+}
+&__rating {
+    background-color: $descritiopnColor;
+    color: $defaultColor;
+    border-radius: 5px;
+    font-family: $defaultFontStyle;
+    font-size: $smallFontSize;
+    line-height: $smallLineHeight; 
+    text-align: center;
+    padding: 1px 9px 1px 10px;
+    margin-left: 8px;
+    @include desktop {
+        padding: 3px 11px 3px 12px; 
+    }
+}
+&__rating.is-hidden {
+    display: none;
+}
+}

@@ -1,0 +1,67 @@
+.pagination {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    padding: 0;
+    background-color: inherit;
+    border: none;
+    font-size: 12px;
+    line-height: 133%;
+    cursor: pointer;
+    font-weight: 700;
+
+    &--active {
+      background: $descritiopnColor;
+      padding: 0;
+      color: $defaultColor;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      border: none;
+      font-size: 12px;
+      line-height: 133%;
+      cursor: pointer;
+    }
+    &--arrow {
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      background: #f7f7f7;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    &--hidden-on-mobile {
+      display: none;
+      @include tablet {
+        display: flex;
+        padding: 0;
+        background-color: inherit;
+        border: none;
+        font-size: 12px;
+        line-height: 133%;
+        cursor: pointer;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}

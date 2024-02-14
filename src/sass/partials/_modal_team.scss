@@ -1,0 +1,211 @@
+.modal-team {
+  max-height: 90vh;
+  width: 85%;
+  background-color: $modalTeamBackground;
+  margin: auto;
+  position: relative;
+  padding: 48 20 40;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 5px;
+  animation: fade-in 0.8s ease-out both;
+  @include tablet {
+    width: 704px;
+  }
+  @include desktop {
+    width: 1280px;
+    padding: 20px 20px;
+    // overflow: hidden;
+  }
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 20px;
+    background: linear-gradient(
+      90deg,
+      rgba(194, 194, 204, 0.6278886554621849) 0%,
+      rgba(194, 194, 204, 0.6278886554621849) 0%
+    );
+    @include desktop {
+      padding: 50px 0 0 0;
+    }
+  }
+  &__hidden {
+    display: none;
+  }
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    height: 14px;
+    font-size: 0;
+    scale: 2;
+    cursor: pointer;
+    transition: transform 0.25s ease-out;
+    &:hover {
+      transform: scale(1.5);
+    }
+    @include desktop {
+      top: 40px;
+    }
+  }
+  &__scroll {
+    position: absolute;
+    right: 40px;
+    // bottom: 20px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    height: 14px;
+    font-size: 0;
+    scale: 2;
+    cursor: pointer;
+    transition: transform 0.25s ease-out;
+    &:hover {
+      transform: scale(1.5);
+    }
+    @include desktop {
+      // display: none;
+      right: 60px;
+      // bottom: 70px;
+      padding-bottom: 30px;
+    }
+  }
+ 
+&__head-title {
+  display: flex;
+  flex-direction: column;   
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid rgb(192, 192, 192);
+  }
+
+  &__header {
+    font-family: $defaultFontStyle;
+    text-align: center;
+    letter-spacing: 1.2px;
+    font-size: $headFontSize;
+    color: $descritiopnColor;
+    @include tablet {
+    letter-spacing: 2px;
+    }
+  }
+  &__header-icon {
+    width: 14px;
+    height: 13px;
+    margin-left: 7px;
+    margin-right: 8px;
+}
+  &__header-add {
+    font-family: $defaultFontStyle;
+    text-align: center;
+    padding-top: 10px;
+    font-size: $smallFontSize;
+    letter-spacing: 1px;
+    color: $propertyColor;
+
+  }
+}
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  padding-top: 20px;
+  @include desktop {
+    width: 1240px;
+    gap: 10px;
+    row-gap: 50px;
+  }
+}
+
+.team-member {
+  font-family: $defaultFontSize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 0 5px;
+  border-bottom: 1px solid rgb(192, 192, 192);
+  margin-bottom: 20px;
+  // @include tablet {
+  //   border-bottom-width: 80%;
+  // }
+  @include desktop {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  &:last-child {
+    margin-bottom: 0px;
+    border: none;
+  }
+  &:nth-child(n + 7) {
+    @include tablet {
+      margin-bottom: 0px;
+      border-bottom: none;
+    }
+  }
+
+  &__description {
+    max-width: 80%;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+    @include desktop {
+      margin-top: 10px;
+    }
+  }
+  &__photo {
+    margin-bottom: 10px;
+    transition: transform 0.25s ease-out;
+    border-radius: 3px;
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      @include tablet {
+        transform: scale(1.08);
+      }
+      @include desktop {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__name {
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    @include desktop {
+      border-bottom: 1px solid rgb(192, 192, 192);
+      padding: 15px 0 5px 0;
+      margin: 0;
+    }
+  }
+  &__function {
+    margin-bottom: 5px;
+    font-style: italic;
+    font-weight: 500;
+    @include desktop {
+      margin-top: 5px;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*@media screen and (min-width: #{$tablet}) {
+  // .modal-team__backdrop {
+  //   padding-top: 100px;
+  // }
+  } */

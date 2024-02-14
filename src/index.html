@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filmoteka</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <include src="./partials/header_home.html"></include>
+    <!-- Grid for movies-->
+    <include src="./partials/container_movies.html"></include>
+    <!-- pagination -->
+    <include src="./partials/pagination.html"></include>
+    <!-- Footer -->
+    <include src="./partials/footer.html"></include>
+    <!-- Modals -->
+    <include src="./partials/modal.html"></include>
+    <include src="./partials/modal_team.html"></include>
+    <include src="./partials/modal_video.html"></include>
+    <!-- Loader -->
+    <include src="./partials/loader.html"></include>
+
+    <script src="./index.js" type="module"></script>
+
+    <script src="./js/modal.js" type="module"></script>
+    <script src="./js/modal_team.js" type="module"></script>
+    <script src="./js/modal_video.js" type="module"></script>
+    <script src="./js/loader.js" type="module"></script>
+    <script src="./js/firebase.js" type="module"></script>
+    <script src="./js/trending-movies.js" type="module"></script>
+    <script src="./js/login-register.js" type="module"></script>
+  </body>
+</html>
