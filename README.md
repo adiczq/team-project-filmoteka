@@ -17,5 +17,3 @@ Bartłomiej Poprawa
 Roland Dąbrowski
 
 Adrian Lacheta
-
-https://github.com/michalmazurdev/team-project-filmoteka/graphs/contributors
